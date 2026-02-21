@@ -14,7 +14,17 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    auto_clean_after_session_restore = true,
     filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        never_show = {
+          'node_modules',
+          '.git',
+        },
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
